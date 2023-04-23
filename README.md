@@ -116,6 +116,7 @@ export default List;
 
 
 Explanation of changes:
+
 1-:In WrappedSingleListItem, the onClick handler should be a function that calls onClickHandler with the index, not the result of calling onClickHandler with the index. Change it to onClick={() => onClickHandler(index)}.
 
 2-:In WrappedListComponent, the useState hook should be called with an initial value. Since the selectedIndex is initially null, it's better to set it explicitly in the hook declaration: const [selectedIndex, setSelectedIndex] = useState(null);.
